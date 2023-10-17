@@ -1,0 +1,72 @@
+.banner-page {
+    color: $blanco;
+
+    @media (max-width: 1200px) {
+        min-height: 1px;
+    }
+
+    .item-banner {
+        position: relative;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+
+        .texto-banner {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                font-weight: 400;
+                margin-bottom: 0
+            }
+
+            a {
+                @include button-cta;
+                margin: 50px auto;
+                display: inline-block;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .texto-banner {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+#banner-home {
+    .item-slider {
+        .texto-banner {
+            h2 {
+                font-size: 3.2rem;
+                margin-bottom: 0;
+            }
+
+            a {
+                margin-left: -4rem;
+
+                @media (max-width: 767px) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
