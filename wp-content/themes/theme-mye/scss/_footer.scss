@@ -1,0 +1,51 @@
+#pie-pagina {
+    background: $morado;
+    color: $blanco;
+    font-size: .85em;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    z-index: 101;
+    position: relative;
+
+    .col-siguenos {
+        align-items: baseline;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    p {
+        margin-bottom: 0;
+
+        a {
+            color: $blanco
+        }
+    }
+
+    .redes-sociales {
+        @include flexible;
+        list-style: none;
+        justify-content: flex-start;
+        margin-bottom: 0;
+        padding: 0;
+
+        a {
+            color: $blanco;
+            font-size: 1.2rem;
+            margin-left: 1rem;
+            text-decoration: none;
+        }
+    }
+
+    @media (max-width: 1180px) {
+        .widget-footer {
+            margin: .5rem 0;
+            width: 100%;
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .col-siguenos {
+            justify-content: center;
+        }
+    }
+}

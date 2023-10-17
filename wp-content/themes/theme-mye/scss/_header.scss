@@ -1,0 +1,65 @@
+#cabecera-site {
+    font-family: 'Dosis', sans-serif;
+    padding: 2rem 0;
+    #identidad {width: 250px;}
+    #menu-site {
+        min-width: 600px;
+        @media (max-width: 1200px) {
+            min-width: auto;
+            max-width: 100%;
+        }
+        @media (max-width: 991px) {
+            display: none;
+            margin-top: 1rem;
+        }
+        #menu-principal {
+            @include flexible;
+            list-style: none;
+            padding: 0;
+            li {
+                margin: 0 .5rem;
+                @media (max-width: 991px) {
+                    margin: 0;
+                }
+                a {
+                    @include reset-enlace;
+                    &:hover {color: $azul}
+                }
+                &.current-menu-item {
+                    a {color: $azul}
+                }
+            }
+        }
+        &.showMenu {
+            display: initial;
+            width: 100%;
+            #menu-principal {
+                background: $morado;
+                flex-direction: column;
+                li {
+                    width: 100%;
+                    a {
+                        color: $blanco;
+                        display: block;
+                        padding: 1rem 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    #open-menu{
+        display: none;
+        @media (max-width: 991px) {
+            display: inline-block;
+            position: absolute;
+            font-size: 2rem;
+            right: 0;
+            top: 1.5rem;
+            width: auto;
+            border: none;
+            background: transparent;
+            color: $morado;
+        }
+    }
+}
