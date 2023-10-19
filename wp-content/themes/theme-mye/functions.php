@@ -104,15 +104,15 @@ if ( function_exists('register_sidebar') ) {
 	$sidebar1 = array(
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="widgettitle">',
-		'after_title' => '</h2>',        
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',        
 		'name'=>__( 'Sidebar Footer', 'textdomain' ),	
 	);	
 	$sidebar2 = array(
 		'before_widget' => '<div class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="widgettitle">',
-		'after_title' => '</h2>',        
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',        
 		'name'=>__( 'My sidebar 2', 'textdomain' ),	
 	);
 

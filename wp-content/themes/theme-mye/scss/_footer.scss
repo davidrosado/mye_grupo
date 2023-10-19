@@ -2,49 +2,46 @@
     background: $morado;
     color: $blanco;
     font-size: .85em;
-    padding: 1.5rem 0;
+    padding: 2.5rem 0;
     z-index: 101;
     position: relative;
 
-    .col-siguenos {
-        align-items: baseline;
-        display: flex;
-        justify-content: flex-end;
+    .widgettitle {
+        color: $blanco;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
     }
 
-    p {
-        margin-bottom: 0;
+    .widget-footer {
+        ul {
+            list-style: none;
+            padding: 0;
 
-        a {
-            color: $blanco
-        }
-    }
+            li {
+                margin-bottom: .7rem;
 
-    .redes-sociales {
-        @include flexible;
-        list-style: none;
-        justify-content: flex-start;
-        margin-bottom: 0;
-        padding: 0;
+                img {
+                    margin-right: 10px;
+                }
 
-        a {
-            color: $blanco;
-            font-size: 1.2rem;
-            margin-left: 1rem;
-            text-decoration: none;
-        }
-    }
-
-    @media (max-width: 1180px) {
-        .widget-footer {
-            margin: .5rem 0;
-            width: 100%;
-            min-width: 100%;
-            text-align: center;
+                a {
+                    color: $blanco;
+                    text-decoration: none;
+                }
+            }
         }
 
-        .col-siguenos {
-            justify-content: center;
+        .logo-footer {
+            margin-bottom: 1.5rem;
+        }
+
+        .redes {
+            margin-top: 1rem;
+            display: inline-block;
+
+            a {
+                margin-right: 15px;
+            }
         }
     }
 }

@@ -21,6 +21,14 @@
     }
 }
 
+@mixin seccion-menor-page {
+    padding: 2rem 0;
+
+    @media (max-width: 991px) {
+        padding: 1.3rem 0;
+    }
+}
+
 @mixin titulo-seccion {
     font-size: 3rem;
     font-weight: 400;
@@ -63,31 +71,43 @@
     border-radius: 30px;
     color: $blanco;
     height: 50px;
-    font-weight: 700;
+    font-weight: 400;
     display: inline-block;
     line-height: 50px;
     text-align: center;
     text-decoration: none;
-    min-width: 150px;
     padding: 0 1.5rem;
     transition: .5 all ease-in;
 
     &:hover {
+        color: $blanco;
+        text-decoration: underline;
         transition: .5 all ease-in;
     }
 }
 
 @mixin titulo-seccion-interna {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 400;
     text-transform: uppercase;
 }
 
+@mixin titulo-grande-seccion-interna {
+    color: $principal;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+
 @mixin titulo-grande {
     color: $principal;
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 400;
-    margin: 1.5rem 0
+    margin: 1.5rem 0;
+}
+
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 @mixin arrow-slide {

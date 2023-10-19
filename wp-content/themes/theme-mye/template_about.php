@@ -50,16 +50,20 @@
                         </div>
 
                         <div class="col-md-6 right-seccion-conocenos">
-                            <div class="d-flex flex-wrap">
-                                <?php if ($imagen_1): ?>
-                                    <img class="img-responsive img-right-seccion-conocenos" src="<?php echo $imagen_1 ?>"/>
-                                <?php endif ?>   
-                                <?php if ($imagen_2): ?>
-                                    <img class="img-responsive img-right-seccion-conocenos" src="<?php echo $imagen_2 ?>"/>
-                                <?php endif ?>   
-                                <?php if ($imagen_3): ?>
-                                    <img class="img-responsive img-right-seccion-conocenos" src="<?php echo $imagen_3 ?>"/>
-                                <?php endif ?>    
+                            <div class="d-flex flex-wrap align-items-center">
+                                <div class="col">
+                                    <?php if ($imagen_1): ?>
+                                        <img class="img-responsive img-right-seccion-conocenos" src="<?php echo $imagen_1 ?>"/>
+                                    <?php endif ?>  
+                                </div>
+                                <div class="col">
+                                    <?php if ($imagen_2): ?>
+                                        <img class="img-responsive img-right-seccion-conocenos" src="<?php echo $imagen_2 ?>"/>
+                                    <?php endif ?>   
+                                    <?php if ($imagen_3): ?>
+                                        <img class="img-responsive img-right-seccion-conocenos" src="<?php echo $imagen_3 ?>"/>
+                                    <?php endif ?>    
+                                </div>
                             </div>              
                         </div>
                     </div>   

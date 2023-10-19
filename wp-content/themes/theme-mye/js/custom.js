@@ -19,28 +19,65 @@ $('#slider-ponentes').slick({
   ]
 });
 
-$('.slider-colaboramos').slick({
-  dots: false,
-  slidesToShow: 5,
-  slidesToScroll: 5,
+$('.slider-testimonios').slick({
+  dots: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
   infinite: true,
   autoplay: false,
   autoplaySpeed: 5000,
   arrows: true,
-  dots: false,
   responsive: [
     {
       breakpoint: 1360,
       settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4
+        slidesToShow: 3,
+        slidesToScroll: 3,
       }
     },
     {
       breakpoint: 960,
       settings: {
         slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    }
+  ]
+});
+
+$('.slider-beneficios').slick({
+  dots: false,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  arrows: false,
+  centerMode: true,
+  variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 1360,
+      settings: {
+        slidesToShow: 3,
         slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        centerMode: false,
+        variableWidth: false,
       }
     },
     {
@@ -48,6 +85,48 @@ $('.slider-colaboramos').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
+      }
+    }
+  ]
+});
+$(".content-beneficios .prev-btn").click(function () {
+  $(".slider-beneficios").slick("slickPrev");
+});
+
+$(".content-beneficios .next-btn").click(function () {
+  $(".slider-beneficios").slick("slickNext");
+});
+
+$('#listado-blog .listado-items-blog').slick({
+  dots: false,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  infinite: true,
+  autoplay: false,
+  autoplaySpeed: 5000,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 1360,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: true
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true
       }
     }
   ]

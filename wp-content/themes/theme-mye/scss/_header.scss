@@ -20,7 +20,7 @@
                 margin-left: 1rem;
 
                 a {
-                    color: $principal;
+                    color: $secundario;
                     font-size: .8rem;
                     margin-left: .5rem;
                     text-decoration: none;
@@ -36,10 +36,6 @@
 
 #cabecera-site {
     padding: .5rem 0;
-
-    #identidad {
-        width: 180px;
-    }
 
     #menu-site {
         min-width: 600px;

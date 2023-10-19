@@ -1,8 +1,7 @@
 body {
     color: $secundario;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+    @include roboto;
+    font-size: 16px;
     line-height: 1.5;
 
     @media (max-width: 1200px) {
@@ -43,6 +42,18 @@ h4,
     font-weight: 400;
 }
 
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
 img {
     max-width: 100%;
 }
@@ -53,6 +64,10 @@ img {
 
 .seccion-page {
     @include seccion-page
+}
+
+.seccion-menor-page {
+    @include seccion-menor-page
 }
 
 .titulo-seccion-interna {
@@ -79,6 +94,16 @@ img {
     background-color: $celeste-bajo;
 }
 
+.bg-azul-oscuro {
+    background-color: $azul-oscuro;
+    color: $blanco;
+}
+
+.bg-morado {
+    background-color: $morado;
+    color: $blanco;
+}
+
 .cta {
     @include button-cta
 }
@@ -101,6 +126,38 @@ h2.wp-block-heading {
 }
 
 /*NOSOTROS*/
+
+#conocenos {
+    .left-seccion-conocenos {
+        .seccion-compromiso {
+            align-items: center;
+            background-color: $blanco;
+            box-shadow: 0px 0px 0px 3px #fdf4f4;
+            border-radius: 20px;
+            margin-top: 2rem;
+
+            .icono-compromiso {
+                max-width: 100px;
+                text-align: center;
+            }
+
+            .texto-compromiso {
+                padding: 2rem 1rem;
+
+                h3 {
+                    color: $azul;
+                }
+            }
+        }
+    }
+
+    .right-seccion-conocenos {
+        img {
+            height: auto;
+        }
+    }
+}
+
 #nuestros_valores {
     .textos-seccion-nuestros-valores {
         @include titulo-grande
@@ -125,8 +182,324 @@ h2.wp-block-heading {
 }
 
 
+/*CONTACTO*/
+#contenido-pagina-contacto {
+    .items-nuestros-valores {
+        .item-widget-contacto {
+            h4 {
+                color: $principal;
+            }
+
+            img {
+                background-color: $azul;
+                border-radius: 50%;
+                margin-right: 20px;
+                padding: 20px;
+            }
+
+            a {
+                color: $secundario
+            }
+        }
+    }
+
+    #formulario-contacto {
+        h3 {
+            @include titulo-grande-seccion-interna
+        }
+    }
+}
+
+.content-form {
+    color: $principal;
+    display: flex;
+    flex-wrap: wrap;
+
+    .wpcf7-form-control-wrap {
+        max-width: 100%;
+    }
+
+    input,
+    button,
+    select,
+    optgroup,
+    textarea {
+        max-width: 100%;
+    }
+
+    input[type="url"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    input[type="text"] {
+        background-color: #0000000A;
+        border: none;
+        border-radius: 10px;
+        margin-top: 15px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    textarea {
+        max-height: 150px
+    }
+
+    input[type="submit"] {
+        @include button-cta;
+        width: 100%;
+    }
+
+    ::placeholder {
+        color: $secundario;
+        opacity: 1;
+        /* Firefox */
+    }
+
+    ::-ms-input-placeholder {
+        /* Edge 12 -18 */
+        color: $secundario;
+    }
+}
+
+.figuras-contacto {
+    .content-figuras {
+        height: 100%;
+        position: relative;
+
+        .frase {
+            position: absolute;
+        }
+
+        #personaje {
+            bottom: 0;
+            position: absolute;
+        }
+
+        #frase-1 {
+            left: 0;
+            top: 10%
+        }
+
+        #frase-2 {
+            right: 0;
+            top: 10%
+        }
+    }
+}
+
+/*SINGLE PROYECTO*/
+.top-proyecto {
+    .breadcrumb-proyecto {
+        color: $principal;
+    }
+
+    .titulo-proyecto {
+        color: $azul;
+        font-size: 1.8rem;
+    }
+
+    .precio-proyecto {
+        text-align: right;
+
+        span {
+            color: $principal;
+            display: block;
+            font-size: 1.8rem;
+        }
+    }
+
+    .item-galeria {
+        margin-bottom: 1rem;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+
+    }
+
+    .item-galeria-sidebar {
+        height: 47%;
+        overflow: hidden;
+
+        img {
+            border-radius: 20px;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
+
+.contenido-proyecto {
+    h3 {
+        color: $principal;
+        font-size: 1.5rem;
+        margin-bottom: 2rem
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    .beneficios-proyecto {
+        #listado-beneficios {
+            flex-wrap: wrap;
+
+            .item-beneficios {
+                font-size: 13px;
+                margin-bottom: 1.5rem;
+                text-align: center;
+                width: 20%;
+            }
+        }
+    }
+
+    .accordion {
+        .accordion-item {
+            border: none;
+            margin-bottom: 1.5rem;
+
+            .subtitulo-acordeon {
+                color: $principal;
+                margin-top: 1rem;
+                text-align: center;
+            }
+
+            #listado-descripcion-tipos {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .item-listado-descripcion-tipos {
+                    font-size: 13px;
+                    margin-bottom: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    max-width: 25%;
+                    width: 20%;
+
+                    img {
+                        height: auto;
+                        margin-right: 10px;
+                        min-width: 40px;
+                    }
+
+                    p {
+                        line-height: 1;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .accordion-button {
+            background-color: $celeste-bajo;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: $celeste-bajo;
+            color: $azul;
+        }
+    }
+
+    .sidebar-proyecto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .cotizar {
+            background: #4d81c0;
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem 0 1.5rem;
+            color: $blanco;
+
+            h3 {
+                color: $blanco
+            }
+
+            .content-form {
+                p {
+                    margin-bottom: 0;
+                }
+
+                input[type=url],
+                input[type=email],
+                input[type=tel],
+                textarea,
+                input[type=text] {
+                    background-color: $blanco;
+                }
+
+                input[type=submit] {
+                    background-color: $blanco;
+                    color: $principal;
+                    margin-top: 1rem;
+                }
+
+                ::placeholder {
+                    color: #303A4280;
+                }
+
+                ::-ms-input-placeholder {
+                    /* Edge 12 -18 */
+                    color: #303A4280;
+                }
+            }
+        }
+    }
+
+}
+
+.documentos-proyecto {
+    align-items: center;
+
+    #listado-documentos {
+        display: flex;
+
+        .item-documentos {
+            padding: 0 15px;
+
+            a {
+                @include roboto;
+                color: $principal;
+                display: flex;
+                font-size: 14px;
+                text-decoration: none;
+
+                i {
+                    color: $azul;
+                    font-size: 2rem;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+#galeria-proyecto {
+    position: relative;
+
+    #open-gallery {
+        bottom: 35px;
+        right: 35px;
+        position: absolute;
+        width: 200px;
+        color: $principal;
+        border-radius: 20px;
+        background: $blanco;
+        border: none;
+    }
+}
+
+
 @media (min-width: 1376px) {
     .container {
         max-width: 1300px
+    }
+}
+
+@media (min-width: 991px) {
+    .modal-dialog {
+        max-width: 800px;
     }
 }

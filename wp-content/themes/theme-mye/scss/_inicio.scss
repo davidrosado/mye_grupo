@@ -7,6 +7,7 @@
         }
 
         .numero-item {
+            color: $principal;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 0;
@@ -74,6 +75,8 @@
 }
 
 .item-blog {
+    padding: 0 15px;
+
     .content-item-listado {
         border: 1px solid $gris;
         border-radius: 20px;
@@ -100,6 +103,201 @@
 
         span {
             color: $azul;
+        }
+    }
+}
+
+#bloque-testimonios-home {
+    .top-bloque {
+        h2 {
+            @include titulo-grande-seccion-interna;
+            color: $azul-oscuro
+        }
+    }
+
+    .item-testimonio {
+        padding: 1rem;
+
+        h4 {
+            color: $principal;
+        }
+
+        .bottom-item {
+            display: flex;
+
+            .imagen-testimonio {
+                margin-right: 10px;
+                width: 48px;
+                height: 48px;
+            }
+
+            .nombre-testimonio {
+                color: $principal;
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.slider {
+
+    .slick-prev,
+    .slick-next {
+        height: 30px;
+        width: 30px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: $secundario;
+        font-size: 30px;
+    }
+}
+
+.card-form {
+    background-color: $blanco;
+    border-radius: 20px;
+    box-shadow: 0px 0px 1px 1px $gris;
+    display: flex;
+    min-height: 250px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 2rem;
+}
+
+#bloque-beneficios-home {
+    .content-beneficios {
+        .textos-beneficios {
+            h2 {
+                @include titulo-grande-seccion-interna;
+                color: $blanco;
+            }
+
+            a {
+                @include button-cta;
+            }
+
+            padding-right: 40px;
+        }
+
+        .item-slider-beneficios {
+            padding: 0 15px;
+            text-align: center;
+
+            img {
+                border-radius: 20px;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .btn-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            padding: 2rem 3rem;
+
+            button {
+                background-color: transparent;
+                border: none;
+                color: $blanco;
+                margin-left: 20px;
+
+                svg {
+                    path {
+                        fill: $blanco;
+                    }
+                }
+
+                &:hover {
+                    background-color: $blanco;
+
+                    svg {
+                        path {
+                            fill: $principal;
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+    }
+}
+
+#bloque-lo-mejor-home {
+    .top-bloque {
+        text-align: center;
+
+        h2 {
+            @include titulo-grande-seccion-interna;
+            color: $principal;
+        }
+    }
+
+    #listado-lo-mejor {
+        .item-lo-mejor {
+            padding: 5px;
+
+            .content-item {
+                position: relative;
+                display: flex;
+
+                img {
+                    width: 100%;
+                }
+
+                .rollover {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background: #00000096;
+                    left: 0;
+                    opacity: 1;
+                    display: flex;
+                    align-items: center;
+                    padding: 2rem;
+                    top: 0;
+                    text-align: center;
+                    color: #fff;
+
+                    .texto-rollover {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    button {
+                        background-color: $azul;
+                        border: none;
+                        border-radius: 50%;
+                        height: 30px;
+                        margin: 30px auto 0;
+                        width: 30px;
+
+                        svg {
+                            path {
+                                color: $blanco;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    .rollover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .first-item,
+        .first-item>div {
+            height: 100%;
+
+            img {
+                object-fit: cover;
+            }
         }
     }
 }

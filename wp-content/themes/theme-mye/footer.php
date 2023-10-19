@@ -2,17 +2,19 @@
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-md-auto widget-footer">
-					<a href="<?php bloginfo('url');?>"><img src="<?php the_field('logo_mye_footer','option'); ?>" alt="MyE Grupo Inmobiliario" title="MyE Grupo Inmobiliario"></a>
+					<a href="<?php bloginfo('url');?>"><img class="logo-footer" src="<?php the_field('logo_mye_footer','option'); ?>" alt="MyE Grupo Inmobiliario" title="MyE Grupo Inmobiliario"></a>
 					<p><?php the_field('texto_copyright_footer','option'); ?></p>
 					<?php
-						if( have_rows('redes', 'option') ):
-							while ( have_rows('redes', 'option') ) : the_row(); 
+						if( have_rows('redes', 'option') ):?>
+						<div class="redes">
+							<?php while ( have_rows('redes', 'option') ) : the_row(); 
 								$url = get_sub_field('url_red');
 								$icono = get_sub_field('img_footer');
 							?>                
-								<a href="<?php echo $url ?>" target="_blank"><img src="<?php echo $icono ?>" alt=""></a>        
-							<?php endwhile; 
-					endif; ?>   					
+								<a href="<?php echo $url ?>" target="_blank"><img src="<?php echo $icono ?>" alt=""></a>       
+							<?php endwhile;?>
+						</div>
+					<?php endif; ?>   					
 				</div>
 				<div class="col-md-auto widget-footer">
 					<?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
@@ -25,7 +27,7 @@
 							while ( have_rows('contacto_footer', 'option') ) : the_row(); 
 								$titulo_bloque = get_sub_field('titulo_bloque');
 							?>                						
-							<h3><?php echo $titulo_bloque?></h3>
+							<h4 class="widgettitle"><?php echo $titulo_bloque?></h4>
 							<ul>
 								<?php while ( have_rows('items_bloque', 'option') ) : the_row(); 
 									$icono = get_sub_field('icono');
@@ -57,6 +59,16 @@
 
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>    
 	<script src="<?php echo get_stylesheet_directory_uri()?>/js/custom.js"></script>
+
+	<script>
+	// get the element
+	$(".openModal").click(function() {
+		var res = $(this).data('carrusel'); 
+		var content = $('#' + res).html();
+		console.log(content);
+		$('#contenido-carrusel').html(content);
+	});   
+	</script>	
 <?php wp_footer(); ?>
 </body>
 </html>

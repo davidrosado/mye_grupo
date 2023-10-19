@@ -1,4 +1,5 @@
-<section id="proyectos" class="seccion-page seccion-ultimos-proyectos">
+<?php $page = get_the_title(); ?>
+<section id="proyectos" class="seccion-page seccion-ultimos-proyectos <?php echo ($page = 'inicio') ? 'bg-celeste-bajo' : ''; ?>">
     <div class="container">
         <div class="row">
             <div class="col titulo-seccion">

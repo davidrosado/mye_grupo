@@ -5,7 +5,7 @@
                 <h2 class="titulo-seccion-noticias color-azul-oscuro">Últimas Noticias</h2>
             </div>
         </div>
-        <div class="row listado-items">
+        <div class="row listado-items slider listado-items-blog">
             <?php
             $args_news = array(          
                 'post_type' => 'post',           

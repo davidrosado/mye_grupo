@@ -16,7 +16,7 @@
                 <div class="row">
                     <?php if ($title): ?>
                         <div class="texto-banner col text-center wow fadeInLeft" data-wow-duration="3s">
-                            <h1><?php echo $title ?></h1>
+                            <h1 class="text-uppercase"><?php echo $title ?></h1>
                             <p class="breadcrumb-banner">Inicio / <?php echo $title ?></p>
                         </div>                        
                     <?php endif ?>
