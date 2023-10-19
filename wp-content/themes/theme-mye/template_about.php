@@ -8,7 +8,7 @@
 ?>
 
 <?php if( have_rows('bloque_conocenos') ):?>
-    <section id="conocenos" class="seccion-interna">
+    <section id="conocenos" class="seccion-page">
         <?php while ( have_rows('bloque_conocenos') ) : the_row(); 
                 $titulo_seccion = get_sub_field('titulo_seccion');
                 $seccion_textos = get_sub_field('seccion_textos');
@@ -22,7 +22,7 @@
                     <div class="row">
                         <?php if ($titulo_seccion): ?>
                             <div class="col-12">
-                                <p class="titulo-seccion-interna">
+                                <p class="titulo-seccion-interna color-azul">
                                     <?php echo $titulo_seccion ?>
                                 </p>   
                             </div>
@@ -69,7 +69,7 @@
 <?php endif; ?>   
 
 <?php if( have_rows('bloque_nuestros_valores') ):?>
-    <section id="nuestros_valores" class="seccion-interna">
+    <section id="nuestros_valores" class="seccion-page bg-celeste-bajo">
         <?php while ( have_rows('bloque_nuestros_valores') ) : the_row(); 
                 $titulo_seccion = get_sub_field('titulo_seccion');
                 $seccion_textos = get_sub_field('seccion_textos');
@@ -78,7 +78,7 @@
                     <div class="row">
                         <?php if ($titulo_seccion): ?>
                             <div class="col-12">
-                                <p class="titulo-seccion-interna">
+                                <p class="titulo-seccion-interna color-azul">
                                     <?php echo $titulo_seccion ?>
                                 </p>   
                             </div>
@@ -98,15 +98,17 @@
                                 $texto = get_sub_field('texto');
                             ?>                
                                 <div class="item-nuestros-valores col-md-4">           
-                                    <?php if ($icono): ?>
-                                        <img class="img-responsive img-item" src="<?php echo $icono ?>"/>
-                                    <?php endif ?>      
-                                    <?php if ($titulo): ?>                                                    
-                                        <h3><?php echo $titulo ?></h3>
-                                    <?php endif ?>        
-                                    <?php if ($texto): ?>                                                    
-                                        <p><?php echo $texto ?></p>
-                                    <?php endif ?>                                                                            
+                                    <div class="content-item-nuestros-valores">
+                                        <?php if ($icono): ?>
+                                            <img class="img-responsive img-item" src="<?php echo $icono ?>"/>
+                                        <?php endif ?>      
+                                        <?php if ($titulo): ?>                                                    
+                                            <h3 class="titulo-item"><?php echo $titulo ?></h3>
+                                        <?php endif ?>        
+                                        <?php if ($texto): ?>                                                    
+                                            <p class="texto-item"><?php echo $texto ?></p>
+                                        <?php endif ?>     
+                                    </div>                                                                       
                                 </div>                  
                             <?php endwhile; ?>
                         </div>

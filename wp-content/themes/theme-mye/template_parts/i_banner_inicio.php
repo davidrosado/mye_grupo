@@ -25,7 +25,7 @@
                                 <div class="ctas-banner">
                                     <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" 
                                     data-src="<?php echo $url_youtube?>" data-bs-target="#modalVideo">
-                                      Play Video
+                                      <img src="<?php echo get_stylesheet_directory_uri()?>/images/play-banner.png" alt="">
                                     </button>                                  
                                     <a href="<?php echo $pagina_enlace?>"><?php echo $texto_enlace?></a>
                                 </div>
@@ -43,7 +43,8 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fas fa-times"></i>
         </button>        
                 <!-- 16:9 aspect ratio -->
         <div class="ratio ratio-16x9">

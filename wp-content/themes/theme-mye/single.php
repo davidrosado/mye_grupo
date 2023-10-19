@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<?php
+<?php 
+	$author = get_the_author();
 	$terms = get_the_terms( $post->ID , 'category');
 	if($terms) {
 	  foreach( $terms as $term ) {
@@ -22,7 +23,8 @@
 						<source media="(min-width: 991px)" srcset="<?php the_post_thumbnail_url('full'); ?>">
 						<img src="<?php the_post_thumbnail_url('full'); ?>">
 					</picture>
-					<h1 class="titulo-seccion titulo-single"><?php the_title(); ?></h1>					
+					<h1 class="titulo-seccion titulo-single"><?php the_title(); ?></h1>		
+					<p class="date-item">Subido el <span><?php echo get_the_date(); ?></span> | Creado por <span><?php echo $author ?></span></p>   			
 				</div>
 			</div>
 

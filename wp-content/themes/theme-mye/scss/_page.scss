@@ -1,7 +1,8 @@
 body {
-    color: $principal;
+    color: $secundario;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 400;
     line-height: 1.5;
 
     @media (max-width: 1200px) {
@@ -9,11 +10,37 @@ body {
     }
 }
 
+.color-verde {
+    color: $verde !important
+}
+
+.color-principal {
+    color: $principal !important
+}
+
+.color-secundario {
+    color: $secundario !important
+}
+
+.color-azul {
+    color: $azul !important
+}
+
+.color-azul-oscuro {
+    color: $azul-oscuro !important
+}
+
 h1,
+.h1,
 h2,
+.h2,
 h3,
-h4 {
+.h3,
+h4,
+.h4 {
+    color: $principal;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 img {
@@ -28,8 +55,78 @@ img {
     @include seccion-page
 }
 
+.titulo-seccion-interna {
+    @include titulo-seccion-interna;
+
+    &:before {
+        margin-right: 10px
+    }
+}
+
+.titulo-seccion-interna.color-verde {
+    &:before {
+        content: url('../images/arrow-verde.png');
+    }
+}
+
+.titulo-seccion-interna.color-azul {
+    &:before {
+        content: url('../images/arrow-azul.png');
+    }
+}
+
+.bg-celeste-bajo {
+    background-color: $celeste-bajo;
+}
+
+.cta {
+    @include button-cta
+}
+
+h2.wp-block-heading {
+    @include titulo-grande
+}
+
+/*POST BLOG*/
+.single {
+    .contenido-detalle {
+        .titulo-single {
+            color: $principal;
+        }
+
+        strong {
+            color: $principal
+        }
+    }
+}
+
+/*NOSOTROS*/
+#nuestros_valores {
+    .textos-seccion-nuestros-valores {
+        @include titulo-grande
+    }
+
+    .item-nuestros-valores {
+        .content-item-nuestros-valores {
+            background-color: $blanco;
+            border-radius: 20px;
+            min-height: 330px;
+            padding: 2rem;
+
+            .img-item {
+                margin-bottom: 1.5rem;
+            }
+
+            .titulo-item {
+                color: $principal
+            }
+        }
+    }
+}
+
+
 @media (min-width: 1376px) {
     .container {
-        max-width: 1180px
+        max-width: 1300px
     }
 }

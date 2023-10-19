@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 @mixin reset-enlace {
     color: $principal;
     font-size: 1.1rem;
@@ -11,67 +12,89 @@
     text-decoration: none;
     text-decoration: none;
 }
+
 @mixin seccion-page {
     padding: 3rem 0;
+
     @media (max-width: 991px) {
         padding: 1.3rem 0;
     }
 }
+
 @mixin titulo-seccion {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 2rem;
 }
+
 @mixin titulo-menor-seccion {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 2rem;
 }
+
 @mixin top-seccion {
     .top-seccion {
         margin-bottom: 4rem;
+
         h3 {
             @include titulo-menor-seccion;
             color: $azul;
         }
-    
+
         p {
             font-size: 1.6rem;
             line-height: 1.3;
+
             @media(max-width: 991px) {
                 font-size: 1.2rem;
             }
         }
-        img {margin-top: 3rem;}
+
+        img {
+            margin-top: 3rem;
+        }
     }
 }
+
 @mixin button-cta {
-    background: $fucsia;
+    background: $azul;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 30px;
     color: $blanco;
-    height: 60px;
-    font-family: 'Dosis', sans-serif;
-    font-size: 0.8em;
+    height: 50px;
     font-weight: 700;
-    margin: 50px auto;
     display: inline-block;
-    line-height: 60px;
+    line-height: 50px;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-    width: 274px;
+    min-width: 150px;
+    padding: 0 1.5rem;
     transition: .5 all ease-in;
+
     &:hover {
-        background: $morado;
         transition: .5 all ease-in;
     }
 }
+
+@mixin titulo-seccion-interna {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@mixin titulo-grande {
+    color: $principal;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 1.5rem 0
+}
+
 @mixin arrow-slide {
     height: 50px;
     width: 30px;
-    &::before {
 
+    &::before {
         display: block;
         height: 50px;
         width: 30px;
