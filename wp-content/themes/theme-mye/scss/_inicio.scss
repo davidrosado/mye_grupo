@@ -1,102 +1,105 @@
-/*PRIMER BLOQUE HOME*/
-#descripcion-home {
-    .row {
-        justify-content: space-between;
-    }
-}
+#widgets-datos-mye {
+    .item-widgets-datos-mye {
+        border-right: 1px solid $gris;
 
-/*TERCER BLOQUE HOME*/
-#descripcion-bottom-home {
-    //background: url('../images/creemos-bg.png') 0 0  no-repeat $blanco;
-    position: relative;
-    h3 {
-        color: $azul;
-        &.espacio-alto {
-            margin-top: 4rem
+        &:last-child {
+            border: none;
+        }
+
+        .numero-item {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        .texto-item {
+            margin-bottom: 0;
         }
     }
-    .texto-del-bloque {
-        padding: 3rem 15px;
-        position: relative;
-    }
-    .fig {
-        position: absolute;   
-    }
-    .fig1 {
-        right: 0;
-        top: -150px
-    }
-    .fig2 {
-        right: 0;
-        top: 0
-    }
-    .fig3 {
-        right: 0;
-        bottom: 0
-    }
+
 }
 
-/*BLOQUE DESCUBRE*/
-.slogan {
+#bloque-nosotros-home {
     h2 {
-        color: $morado;
-        font-size: 2.8rem;
-        font-weight: 500;
-        margin-bottom: 3rem;
-        @media(max-width: 991px) {
-            font-size: 2rem;
-        }
-        strong {
-            font-weight: 500;
-            font-size: 1.4em;
-        }
+        @include titulo-grande
     }
-    a {
-        @include button-cta;
-        display: block;
-        margin: 0 auto;
+
+    .right-bloque-nosotros-home {
+        a {
+            @include button-cta
+        }
     }
 }
 
-.colaboramos {
-    h3 {
-        color: $azul;
-        margin-bottom: 2rem;
-    }
-    .slider-colaboramos {
-        .item-slider {
-            align-items: center;
-            display: flex;
-            min-height: 170px;
-            img {
-                display: inline-block;
-                margin: 0 auto;
-                filter: grayscale(100%);
-                &:hover {
-                    filter: grayscale(0%)
+#listado-proyectos {
+    .item-listado {
+        display: flex;
+        flex-wrap: wrap;
+
+        .right-item {
+            padding-right: 2rem;
+
+            .titulo-item {
+                @include titulo-grande
+            }
+
+            .tag-project {
+                background-color: $azul;
+                color: $blanco;
+                display: inline;
+                margin-bottom: 0;
+                padding: 0.5rem 1rem;
+                border-radius: 0 20px 20px 0;
+            }
+        }
+
+        &:nth-child(2) {
+            flex-direction: row-reverse;
+
+            .right-item {
+                .tag-project {
+                    background-color: $celeste;
                 }
             }
         }
-        .slick-prev {
-            @include arrow-slide;
-            &::before {
-                content: url('../images/left-arrow.png');
-                opacity: 1
+    }
+
+
+}
+
+.seccion-ultimas-noticias {
+    .titulo-seccion-noticias {
+        @include titulo-grande
+    }
+}
+
+.item-blog {
+    .content-item-listado {
+        border: 1px solid $gris;
+        border-radius: 20px;
+        padding: 1.5rem;
+
+        a {
+            color: $secundario;
+            text-decoration: none;
+
+            .titulo-item {
+                color: $principal;
+                font-size: 1.3rem;
+                font-weight: 400;
             }
-            @media (max-width: 1280px) {
-                left: 15px
+
+            p {
+                color: $secundario
             }
         }
+    }
 
-        .slick-next {
-            @include arrow-slide;
-            &::before {
-                content: url('../images/right-arrow.png');
-                opacity: 1
-            }
-            @media (max-width: 1280px) {
-                right: 15px
-            }
+    .date-item {
+        color: $principal;
+
+        span {
+            color: $azul;
         }
     }
 }

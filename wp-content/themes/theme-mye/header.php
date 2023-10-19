@@ -22,13 +22,12 @@ $v_ = ($dev) ? '?v=' . rand(100, 999) : '';
 
 <body <?php body_class(); ?>>
 
-	<header id="cabecera-site">
-		<div class="container">
 
+	<div id="top-header">
+		<div class="container">
 			<div class="row justify-content-between align-items-center col-md-12">
 				<div class="col redes-header redes">
 					<?php
-						
 						if( have_rows('redes', 'option') ):
 							while ( have_rows('redes', 'option') ) : the_row(); 
 								$url = get_sub_field('url_red');
@@ -56,8 +55,11 @@ $v_ = ($dev) ? '?v=' . rand(100, 999) : '';
 						<?php endwhile;?>
 					<?php endif; ?>   					
 				</div>
-			</div>
-
+			</div>	
+		</div>	
+	</div>
+	<header id="cabecera-site">
+		<div class="container">
 			<div class="row justify-content-between align-items-center col-md-12">
 				<div id="identidad" class="col-md-auto col-sm-auto wow fadeInDown" data-wow-duration="3s">
 					<a href="<?php bloginfo('url');?>"><img src="<?php the_field('logo_mye','option'); ?>" alt="MyE Grupo Inmobiliario" title="MyE Grupo Inmobiliario"></a>

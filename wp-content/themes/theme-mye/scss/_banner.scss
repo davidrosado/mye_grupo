@@ -25,6 +25,7 @@
             height: 100%;
 
             h1 {
+                color: $blanco;
                 font-size: 2.5rem;
                 font-weight: 700;
                 margin-bottom: 1.5rem;
@@ -53,20 +54,40 @@
 }
 
 #banner-home {
-    .item-slider {
+    .item-banner {
         .texto-banner {
-            h2 {
-                font-size: 3.2rem;
-                margin-bottom: 0;
+            h1 {
+                color: $blanco;
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
             }
 
-            a {
-                margin-left: -4rem;
+            p {
+                font-size: 1.5rem
+            }
 
-                @media (max-width: 767px) {
-                    margin-left: 0;
+            .ctas-banner {
+                button {
+                    border: none;
+                    background: transparent;
+                }
+
+                a {
+                    margin-left: 1rem;
+
+                    @media (max-width: 767px) {
+                        margin-left: 0;
+                    }
                 }
             }
         }
+    }
+}
+
+#modalVideo {
+    iframe {
+        min-height: 350px;
+        width: 100%;
     }
 }

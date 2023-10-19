@@ -20,7 +20,7 @@
 	</div>	
 </section>
 
-<section id="listado-blog" class="seccion-page seccion-contenido">
+<section id="listado-blog" class="seccion-contenido">
     <div class="container">
         <div class="row listado-items">
           <?php
@@ -37,17 +37,20 @@
           <?php if ( $custom_query->have_posts() ) : ?>
             <!-- the loop -->
             <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
-                <div class="col-md-6 item-blog item-listado">
-                    <div class="left-item wow fadeInLeft" data-wow-duration="3s">
-                      <?php if (has_post_thumbnail()) :?> 
-                        <a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url('medium') ?>"></a>
-                      <?php endif ?>
-                      
-                    </div>
-                    <div class="right-item wow fadeInRight" data-wow-duration="3s">
-                      <h3 class="titulo-item"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-                      <p class="resumen-item"><?php the_excerpt();?></p>
-                      <p class="date-item">Subido el <?php echo get_the_date(); ?></p>                      
+                <div class="col-md-4 item-blog item-listado mb-4">
+                    <div class="content-item-listado">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="top-item wow fadeInLeft" data-wow-duration="3s">
+                                <?php if (has_post_thumbnail()) :?> 
+                                    <img src="<?php the_post_thumbnail_url('large') ?>">
+                                <?php endif ?>
+                            </div>
+                            <div class="bottom-item wow fadeInRight" data-wow-duration="3s">
+                                <h3 class="titulo-item"><?php the_title() ?></h3>
+                                <p class="resumen-item"><?php the_excerpt();?></p>
+                                <p class="date-item">Subido el <span><?php echo get_the_date(); ?></span></p>             
+                            </div>
+                        </a>
                     </div>
                 </div>
             <?php endwhile; ?>

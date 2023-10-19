@@ -4,8 +4,9 @@
 // Option B: Include parts of Bootstrap
 
 // Required
-$principal: #696969;
-$secundario: #39374D;
+$principal: #39374D;
+$secundario: #696969;
+$gris: #ccc;
 $morado: #39374D;
 $blanco: #fff;
 $amarillo: #deb330;
@@ -13,9 +14,11 @@ $negro: #000;
 $rojo: #d20023;
 $fucsia: #d20023;
 $azul: #4D81C0;
-$celeste: #4D81C0;
+$azul-oscuro: #054457;
+$celeste: #1DAEEF;
+$celeste-bajo: #4D81C00D;
 $oscuro: #4d4d4d;
-$verde: #25d366;
+$verde: #81B352;
 
 @import "../bootstrap/scss/functions";
 @import "../bootstrap/scss/variables";
@@ -32,6 +35,8 @@ $verde: #25d366;
 @import "../bootstrap/scss/utilities/api";
 @import "../bootstrap/scss/modal";
 @import "../bootstrap/scss/forms";
+@import "../bootstrap/scss/accordion";
+@import "../bootstrap/scss/transitions";
 
 @import "mixin";
 @import "page";
